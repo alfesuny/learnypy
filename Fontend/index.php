@@ -125,6 +125,295 @@
     </section>
 
 
+
+        <!--------------------------------------- Start Most Popular Courses ----------------------------------->
+
+        <section class="posts">
+        <h2 class="most-popular-courses">Most Popular Courses</h2>
+        <div class="container courses__container__grid">
+
+            <div class="course__container_in_corses">
+                <div>
+                    <img class="course__container_in_corses_banar" src="../images/blog39.jpg" alt="">
+                </div>
+                <div>
+                    <div>
+                        <div style="margin-bottom: 5px; margin-top: 5px;">
+                            <small>4.0</small>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <small>(43)</small>
+                        </div>
+                        <h4 style="margin-top: 5px; margin-bottom: 5px;"><a href="./course.html">Web Development with
+                                PHP</a></h4>
+
+                        <div style="margin-bottom: 5px; margin-top: 5px;">
+                            <i class="fa-regular fa-circle-user"></i> <small>Enroll 23</small>
+                            <i class="fa-regular fa-file-lines"></i> <small>12 Lesson</small>
+                            <i class="fa-regular fa-clock"></i> <small>Start 01-01-23</small>
+                        </div>
+
+                        <hr
+                            style="height:1px;border-width:0;color:rgb(175, 175, 175);background-color:rgb(200, 200, 200);">
+
+                    </div>
+
+                    <div style="margin-top: 15px;" class="courses__instructor">
+                        <div class="courses__author_profile_pic">
+                            <img src="../images/avatar8.jpg" alt="">
+                            <a href="./singleInstructor.html">
+                                <h5 style="margin-left: 15px;">Fahad Ahmad</h5>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#"><button class="btn__enrole" type="submit">Enrole</button></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="course__container_in_corses">
+                <div>
+                    <img class="course__container_in_corses_banar" src="../images/blog39.jpg" alt="">
+                </div>
+                <div>
+                    <div>
+                        <div style="margin-bottom: 5px; margin-top: 5px;">
+                            <small>4.0</small>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <small>(43)</small>
+                        </div>
+                        <h4 style="margin-top: 5px; margin-bottom: 5px;"><a href="./course.html">Web Development with
+                                PHP</a></h4>
+
+                        <div style="margin-bottom: 5px; margin-top: 5px;">
+                            <i class="fa-regular fa-circle-user"></i> <small>Enroll 23</small>
+                            <i class="fa-regular fa-file-lines"></i> <small>12 Lesson</small>
+                            <i class="fa-regular fa-clock"></i> <small>Start 01-01-23</small>
+                        </div>
+
+                        <hr
+                            style="height:1px;border-width:0;color:rgb(175, 175, 175);background-color:rgb(200, 200, 200);">
+
+                    </div>
+
+                    <div style="margin-top: 15px;" class="courses__instructor">
+                        <div class="courses__author_profile_pic">
+                            <img src="../images/avatar8.jpg" alt="">
+                            <a href="./singleInstructor.html">
+                                <h5 style="margin-left: 15px;">Fahad Ahmad</h5>
+                            </a>
+                        </div>
+                        <div>
+                            <button class="btn__enrole" type="submit">Enrole</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="course__container_in_corses">
+                <div>
+                    <img class="course__container_in_corses_banar" src="../images/blog39.jpg" alt="">
+                </div>
+                <div>
+                    <div>
+                        <div style="margin-bottom: 5px; margin-top: 5px;">
+                            <small>4.0</small>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <small>(43)</small>
+                        </div>
+                        <h4 style="margin-top: 5px; margin-bottom: 5px;"><a href="./course.html">Web Development with
+                                PHP</a></h4>
+
+                        <div style="margin-bottom: 5px; margin-top: 5px;">
+                            <i class="fa-regular fa-circle-user"></i> <small>Enroll 23</small>
+                            <i class="fa-regular fa-file-lines"></i> <small>12 Lesson</small>
+                            <i class="fa-regular fa-clock"></i> <small>Start 01-01-23</small>
+                        </div>
+
+                        <hr
+                            style="height:1px;border-width:0;color:rgb(175, 175, 175);background-color:rgb(200, 200, 200);">
+
+                    </div>
+
+                    <div style="margin-top: 15px;" class="courses__instructor">
+                        <div class="courses__author_profile_pic">
+                            <img src="../images/avatar8.jpg" alt="">
+                            <a href="./singleInstructor.html">
+                                <h5 style="margin-left: 15px;">Fahad Ahmad</h5>
+                            </a>
+                        </div>
+                        <div>
+                            <button class="btn__enrole" type="submit">Enrole</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            
+            <div class="course__container_in_corses">
+                <div>
+                    <img class="course__container_in_corses_banar" src="../images/blog39.jpg" alt="">
+                </div>
+                <div>
+                    <div>
+                        <div style="margin-bottom: 5px; margin-top: 5px;">
+                            <small>4.0</small>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star star__golden_color"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <small>(43)</small>
+                        </div>
+                        <h4 style="margin-top: 5px; margin-bottom: 5px;"><a href="./course.html">Web Development with
+                                PHP</a></h4>
+
+                        <div style="margin-bottom: 5px; margin-top: 5px;">
+                            <i class="fa-regular fa-circle-user"></i> <small>Enroll 23</small>
+                            <i class="fa-regular fa-file-lines"></i> <small>12 Lesson</small>
+                            <i class="fa-regular fa-clock"></i> <small>Start 01-01-23</small>
+                        </div>
+
+                        <hr
+                            style="height:1px;border-width:0;color:rgb(175, 175, 175);background-color:rgb(200, 200, 200);">
+
+                    </div>
+
+                    <div style="margin-top: 15px;" class="courses__instructor">
+                        <div class="courses__author_profile_pic">
+                            <img src="../images/avatar8.jpg" alt="">
+                            <a href="./singleInstructor.html">
+                                <h5 style="margin-left: 15px;">Fahad Ahmad</h5>
+                            </a>
+                        </div>
+                        <div>
+                            <button class="btn__enrole" type="submit">Enrole</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div>
+            <div class="courses__category__button">
+                <a href="./courses.html"><button class="btn">Explore All Courses</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------------------- End Most Popular Courses ----------------------------------->
+
+    <!----Start Why student choose us-->
+    <section>
+        <div style="background-color: #4b4780;">
+            <div class=" container why_student_choose">
+                <div style="margin-left: 30px;">
+                    <h2>Why Students Choose Us <br>for gain Their Knowledge</h2>
+                    <p>LearnyPy also provides education consulting services for student<br>who want to study in Abroad, and provide help with the <br>application process </p>
+                    <br>
+                    <p><i class="uil uil-check-circle"></i> Industy Expert Instructor</p>
+                    <p><i class="uil uil-check-circle"></i> Up-to-Date Course Content</p>
+                    <p><i class="uil uil-check-circle"></i> Biggest Student Community</p>
+                    <br>
+                </div>
+                <div class="why_student_choose_pic">
+                    <img  src="../images/why_choose.png" alt="">
+                </div>
+            </div>
+        </div>
+    <!-- </section> -->
+    <!----End Why student choose us-->
+
+    <!-- One platform many courses -->
+    <!-- <section> -->
+        <div style="background-color: #6e6b8c;">
+            <div class=" container one_platform">
+                <div class="one_platform_pic">
+                    <img  src="../images/one_platefrom.png" alt="">
+                </div>
+                <div style="margin-left: 30px;">
+                    <h2>One Platfrom Many Courses <br>and E-book For You</h2>
+                    <p>Elevate your learning journey by accessing <br> a vast array of courses and eBooks all in one place, <br> simplifying your pursuit of knowledge and personal growth.  </p>
+                    <br>
+                    <p><i class="uil uil-check-circle"></i> Easy Online Learning Platfrom</p>
+                    <p><i class="uil uil-check-circle"></i> Friendly Environmant & Teachers</p>
+                    <br>
+                    <div>
+                        <div class="courses__category__button">
+                            <a href="./signin.html"><button class="btn">Gent Started</button></a>
+                            <a href="./courses.html"><button class="btn">Browse Courses</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!----Create a community -->
+    <section>
+        <!-- <div style="background-color: #4b4780;"> -->
+            <div class=" container why_student_choose" style="border-radius: 10px;">
+                <div style="margin-left: 30px;">
+                    <h2>Creating A Community Of <br>Life Long Learners</h2>
+                    <p>LearnyPy is a groundbreaking online learning platform <br> that is redefining the way people acquire knowledge <br> and skills. With a mission to make learning accessible, <br> engaging, and effective, LearnyPy offers a wide range of <br>courses and resources that cater to learners of all levels <br> and interests.</p>
+                    <br>
+                    <p><i class="uil uil-check-circle"></i> Industy Expert Instructor</p>
+                    <p><i class="uil uil-check-circle"></i> Course Certificate for particular Course</p>
+                    <br>
+                </div>
+                <div class="why_student_choose_pic">
+                    <img  src="../images/create_community.png" alt="">
+                </div>
+            </div>
+        <!-- </div> -->
+    </section>
+    
+
+
+    <!-- Subsceibe -->
+
+    <section>
+        <div class="container subscribe">
+            <div>
+                <h2>Subsceibe For Get Update</h2>
+            </div>
+            <div class="margin_5px">
+                <input type="text" placeholder="Enter Your Email">
+            </div>
+            <div>
+                <button class="btn">Subsceibe</button>
+            </div>
+        </div>
+    </section> <br><br>
+
+
+
+
     <!--------------------------------------- Start Category ----------------------------------->
     <!-- <section class="category__buttons">
         <div class="container category__buttons-container">

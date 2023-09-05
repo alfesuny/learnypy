@@ -1197,3 +1197,56 @@ input, textarea, select {
     justify-content: space-between;
     /* align-items: center; */
 }
+
+
+/*-------------------popular course in index.html------------------*/
+.most-popular-courses{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Why student choose us */
+.why_student_choose{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid gray; */
+    /* border-radius: 10px; */
+    background-color: #4b4780;
+}
+.why_student_choose_pic{
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 419px;
+    width: 400px;
+}
+
+/* one platform many ebooks */
+.one_platform{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.one_platform_pic{
+    margin-right: 10px;
+    margin-top: 10px;
+    height: 400px;
+    width: 380px;
+}
+
+/* subsceibe */
+.subscribe{
+    background-color: #8091c5;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.margin_5px{
+    margin: 5px;
+}
