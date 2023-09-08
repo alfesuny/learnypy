@@ -1,3 +1,46 @@
+<?php
+
+    session_start();
+
+        // Check if the request method is POST
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Database connection parameters
+            $servername = "localhost"; // Replace with your server name
+            $username = "root"; // Replace with your database username
+            $password = ""; // Replace with your database password
+            $dbname = "learnypy"; // Replace with your database name
+
+            // Create a database connection
+            $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+            // Check connection
+            if (!$conn) {
+                die("Connection failed: " . mysqli_connect_error());
+            }
+
+            // Get the username from the POST data
+            $usernameToDelete = $_POST['username'];
+
+            // Prepare and execute the SQL query to delete the instructor record
+            $sql = "DELETE FROM instructor_info WHERE instructor_username = ?";
+            $stmt = mysqli_prepare($conn, $sql);
+            mysqli_stmt_bind_param($stmt, "s", $usernameToDelete);
+
+            if (mysqli_stmt_execute($stmt)) {
+                echo "Instructor with username $usernameToDelete has been deleted.";
+            } else {
+                echo "Error deleting instructor: " . mysqli_error($conn);
+            }
+
+            // Close the statement and database connection
+            mysqli_stmt_close($stmt);
+            mysqli_close($conn);
+        } 
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,15 +159,20 @@
                         
                         while ($row = mysqli_fetch_assoc($result)){
 
-                            echo"
-                            <tr>
-                            <td>".$row['instructor_fname']."</td>
-                            <td>".$row['instructor_lname']."</td>
-                            <td>".$row['instructor_username']."</td>
-                            
-                            <td><a href='' class='btn sm danger'>Delete</a></td>
+                            echo "
+                                    <tr>
+                                        <td>".$row['instructor_fname']."</td>
+                                        <td>".$row['instructor_lname']."</td>
+                                        <td>".$row['instructor_username']."</td>
+                                        <td>
+                                            <form action='manageInstructor.php' method='POST'>
+                                                <input type='hidden' name='username' value='".$row['instructor_username']."'>
+                                                <button type='submit' class='btn sm danger' name='delete'>Delete</button>
+                                            </form>
+                                        </td>
+                                    </tr>";
 
-                            </tr> ";
+                            
                         }
                     }
                 }
@@ -163,6 +211,7 @@
     <!--------------------------------------- End Category ----------------------------------->
 
     <!--------------------------------------- Start Footer ----------------------------------->
+    
     <footer>
         <div class="footer__socials">
             <a href="https://www.linkedin.com/in/fahad-bd/" target="_blank"><i class="uil uil-linkedin"></i></a>
@@ -190,33 +239,32 @@
             <article>
                 <h4>Important Link</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Instructors</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Signin</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="./courses.php">Courses</a></li>
+                    <li><a href="./instructors.php">Instructors</a></li>
+                   
+                    <li><a href="./signin.php">Signin</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="">Call Numbers</a></li>
-                    <li><a href="">Email</a></li>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">LinkedIn</a></li>
+               
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Permalinks</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">East West University</a></li>
-                    <li><a href="">Bangladesh Govt</a></li>
-                    <li><a href="">Ministry of Education</a></li>
-                    <li><a href="">Police</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="https://www.ewubd.edu/">East West University</a></li>
+                    <li><a href="https://bangladesh.gov.bd/index.php">Bangladesh Govt</a></li>
+                    <li><a href="https://moedu.gov.bd/">Ministry of Education</a></li>
+                    <li><a href="https://www.police.gov.bd/">Police</a></li>
                 </ul>
             </article>
         </div>
@@ -224,6 +272,7 @@
             <small>Copyright &copy; 2024 <span style="color: orange;">Learny</span>Py</small>
         </div>
     </footer>
+
     <!--------------------------------------- End Footer ----------------------------------->
 
 

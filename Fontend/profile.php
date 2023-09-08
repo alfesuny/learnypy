@@ -3,7 +3,7 @@
     session_start();
 
     if ( !isset($_SESSION['active_status'])  ) {
-        header("Location: ./index.php");
+        header("Location: ./signin.php");
         exit();
     }
 
@@ -106,8 +106,19 @@
                     <td> <?php echo $_SESSION['user_type']; ?> </td>
                 </tr>
                 <tr>
-                    <td><i class="uil uil-user"></i> Name</td>
-                    <td>Alfe Suny</td>
+                    <?php
+                    if($_SESSION['user_type'] == "student"){
+                        
+                        echo '<td><i class="uil uil-user"></i> Email</td> ';
+                        echo '<td>'.$_SESSION['email'].'</td> ';
+                    }
+                    else{
+                        echo '<td><i class="uil uil-user"></i> User Name</td> ';
+                        echo '<td>'.$_SESSION['user_name'].'</td> ';
+                    }
+
+
+                    ?>
                 </tr>
             </table>
 
@@ -127,93 +138,16 @@
         </div>
     </section>
 
-    <section>
-        <div class="container">
-            <h2 style="margin-left: 50px;">Courses</h2>
-            <hr style="height:2px;border-width:0;color:gray;background-color:gray; margin: 20px; margin-left: 40px;">
-
-            <!-- <article class="post">
-                <div class="post__thumbnail">
-                    <img src="../images/blog17.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <h3 class="post__title">
-                        <a href="./course.html">Structure Programming</a>
-                    </h3>
-                </div>
-            </article> -->
-        
-
-        <div class="singleInstructor__courses">
-            <div class="singleInstructor__courses_div">
-                <div class="">
-                    <img class="singleInstructor__courses_thumbnail" src="../images/blog17.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <h3 class="post__title">
-                        <a href="./course.html">Structure Programming</a>
-                    </h3>
-                </div>
-            </div>
 
 
-            <div class="singleInstructor__courses_div">
-                <div class="">
-                    <img class="singleInstructor__courses_thumbnail" src="../images/blog17.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <h3 class="post__title">
-                        <a href="./course.html">Structure Programming</a>
-                    </h3>
-                </div>
-            </div>
-
-
-            <div class="singleInstructor__courses_div">
-                <div class="">
-                    <img class="singleInstructor__courses_thumbnail" src="../images/blog17.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <h3 class="post__title">
-                        <a href="./course.html">Structure Programming</a>
-                    </h3>
-                </div>
-            </div>
-
-
-            <div class="singleInstructor__courses_div">
-                <div class="">
-                    <img class="singleInstructor__courses_thumbnail" src="../images/blog17.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <h3 class="post__title">
-                        <a href="./course.html">Structure Programming</a>
-                    </h3>
-                </div>
-            </div>
-
-
-        </div></div>
-
-    </section>
     <!--------------------------------------- End Single Instructor Body ----------------------------------->
 
     <!--------------------------------------- Start Category ----------------------------------->
-    <section class="category__buttons">
-        <div class="container category__buttons-container">
-            <a href="./category-posts.html" class="category__button">Programming</a>
-            <a href="./category-posts.html" class="category__button">Development</a>
-            <a href="./category-posts.html" class="category__button">Data Science</a>
-            <a href="./category-posts.html" class="category__button">Photography</a>
-            <a href="./category-posts.html" class="category__button">Networking</a>
-            <a href="./category-posts.html" class="category__button">Art & Design</a>
-            <a href="./category-posts.html" class="category__button">Sale & Marketing</a>
-            <a href="./category-posts.html" class="category__button">UX/UI Design</a>
-        </div>
-    </section>
+  
     <!--------------------------------------- End Category ----------------------------------->
 
     <!--------------------------------------- Start Footer ----------------------------------->
+    
     <footer>
         <div class="footer__socials">
             <a href="https://www.linkedin.com/in/fahad-bd/" target="_blank"><i class="uil uil-linkedin"></i></a>
@@ -241,40 +175,40 @@
             <article>
                 <h4>Important Link</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Instructors</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Signin</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="./courses.php">Courses</a></li>
+                    <li><a href="./instructors.php">Instructors</a></li>
+                   
+                    <li><a href="./signin.php">Signin</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="">Call Numbers</a></li>
-                    <li><a href="">Email</a></li>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">LinkedIn</a></li>
+               
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Permalinks</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">East West University</a></li>
-                    <li><a href="">Bangladesh Govt</a></li>
-                    <li><a href="">Ministry of Education</a></li>
-                    <li><a href="">Police</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="https://www.ewubd.edu/">East West University</a></li>
+                    <li><a href="https://bangladesh.gov.bd/index.php">Bangladesh Govt</a></li>
+                    <li><a href="https://moedu.gov.bd/">Ministry of Education</a></li>
+                    <li><a href="https://www.police.gov.bd/">Police</a></li>
                 </ul>
             </article>
         </div>
         <div class="footer__copyright">
-            <small>Copyright &copy; 2024 LearnyPy</small>
+            <small>Copyright &copy; 2024 <span style="color: orange;">Learny</span>Py</small>
         </div>
     </footer>
+
     <!--------------------------------------- End Footer ----------------------------------->
 
 

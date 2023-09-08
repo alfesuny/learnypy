@@ -5,7 +5,7 @@
                 <li><a href="./index.php">Home</a></li>
                 <li><a href="./courses.php">Courses</a></li>
                 <li><a href="./instructors.php">Instructors</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <!-- <li><a href="#">Contact Us</a></li> -->
 
                 
                 
@@ -73,7 +73,7 @@
                 <li class="nav__profile">
                     
                     <div class="avatar">
-                        <img src="/pic/'.$_SESSION['user_type']. '/'.$image_name.'" style = "height:125%" >
+                        <img src="../pic/'.$_SESSION['user_type']. '/'.$image_name.'" style = "height:125%" >
                     </div> ' 
 
                    . $_SESSION['user_name'] .

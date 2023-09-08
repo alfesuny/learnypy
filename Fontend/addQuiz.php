@@ -35,6 +35,7 @@
         $selectedOption = $_POST["course_information"];
         $course_quiz_question = $_POST['course_quiz_question'];
         $course_quiz_marks = $_POST['course_quiz_marks'];
+        $fileType = $_POST['fileType'];
  
         $courseName;
         $courseInstructor;
@@ -45,8 +46,14 @@
         
         $query = "INSERT INTO course_quiz (course_name,course_category,course_instructor,course_quiz_question, course_quiz_marks) VALUES
          ('$courseName', '$courseCategory', '$courseInstructor','$course_quiz_question','$course_quiz_marks')";
-        
         mysqli_query($conn,$query);
+        
+
+
+        $query2=  "INSERT INTO course_material (course_name,course_category,course_instructor,course_material_type) VALUES
+        ('$courseName', '$courseCategory', '$courseInstructor','$fileType')";
+        mysqli_query($conn,$query2);
+        
         
 
     }
@@ -101,7 +108,7 @@
            
             
 
-            <h1> Add Course Material</h1>
+            <h1> Add Quiz </h1>
 
                 <form id="uploadForm" action="addQuiz.php" method="POST" enctype="multipart/form-data">
 
@@ -109,7 +116,7 @@
 
                         <?php
                         $username = $_SESSION['user_name'];
-                        $query = "SELECT * FROM COURSE WHERE course_instructor = '$username' ";
+                        $query = "SELECT * FROM course WHERE course_instructor = '$username' ";
                         $result = mysqli_query($conn, $query);
                         if($result){
                             
@@ -126,7 +133,11 @@
 
                     </select>
                         
-                  
+                       <label for="fileType">Select File Type:</label>
+                        <select id="fileType" name="fileType" required>
+                            <option value="quiz">Quiz</option>
+                            
+                        </select>
                         <label for="course_quiz_question">State Your Quiz Question!</label>
                         <input type="text" id='course_quiz_question' name= 'course_quiz_question'>
 
@@ -157,18 +168,21 @@
     <!--------------------------------------- End Category ----------------------------------->
 
     <!--------------------------------------- Start Footer ----------------------------------->
+ 
     <footer>
         <div class="footer__socials">
             <a href="https://www.linkedin.com/in/fahad-bd/" target="_blank"><i class="uil uil-linkedin"></i></a>
             <a href="https://www.youtube.com/" target="_blank"><i class="uil uil-youtube"></i></a>
             <a href="https://www.facebook.com/fahadahammedbd" target="_blank"><i class="uil uil-facebook"></i></a>
             <a href="https://twitter.com/fahadbd01" target="_blank"><i class="uil uil-twitter"></i></a>
-            <a href="https://www.instagram.com/fahadahammedbd/" target="_blank"><i class="uil uil-instagram-alt"></i></a>
+            <a href="https://www.instagram.com/fahadahammedbd/" target="_blank"><i
+                    class="uil uil-instagram-alt"></i></a>
         </div>
         <div class="container footer__container">
             <article style="margin-right: 50px;">
                 <img src="../images/logo1.png" alt="">
-                <small>Join LearnyPy, the ultimate online learning platform! Explore a vast range of courses, gain new skills, and unlock your potential from anywhere, at any time.</small>
+                <small>Join LearnyPy, the ultimate online learning platform! Explore a vast range of courses, gain new
+                    skills, and unlock your potential from anywhere, at any time.</small>
                 <!-- <h4>xyz</h4> -->
                 <!-- <ul>
                     <li><a href="">a</a></li>
@@ -182,33 +196,32 @@
             <article>
                 <h4>Important Link</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Instructors</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Signin</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="./courses.php">Courses</a></li>
+                    <li><a href="./instructors.php">Instructors</a></li>
+                   
+                    <li><a href="./signin.php">Signin</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="">Call Numbers</a></li>
-                    <li><a href="">Email</a></li>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">LinkedIn</a></li>
+               
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Permalinks</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">East West University</a></li>
-                    <li><a href="">Bangladesh Govt</a></li>
-                    <li><a href="">Ministry of Education</a></li>
-                    <li><a href="">Police</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="https://www.ewubd.edu/">East West University</a></li>
+                    <li><a href="https://bangladesh.gov.bd/index.php">Bangladesh Govt</a></li>
+                    <li><a href="https://moedu.gov.bd/">Ministry of Education</a></li>
+                    <li><a href="https://www.police.gov.bd/">Police</a></li>
                 </ul>
             </article>
         </div>
@@ -216,6 +229,7 @@
             <small>Copyright &copy; 2024 <span style="color: orange;">Learny</span>Py</small>
         </div>
     </footer>
+
     <!--------------------------------------- End Footer ----------------------------------->
 
 

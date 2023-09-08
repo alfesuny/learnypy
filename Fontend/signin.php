@@ -106,7 +106,7 @@
                         <button class="btn danger"> <a href='./admin.php'>Admin Login</a> </button> 
                 </div>
                 
-                <small>Don't have an account? <a href="./signup.html">Sign Up</a></small>
+                <small>Don't have an account? <a href="./signup.php">Sign Up</a></small>
             </form>
         </div>
     </section>

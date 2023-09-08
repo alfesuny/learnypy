@@ -41,8 +41,8 @@
             <h2>Grow your <span style="color: #fe8171;">skills</span> to advance <br> your career path.</h2>
             <p>LearnyPy is an online eduction platfrom</p><br>
             <div class="buttons_1">
-                <a href="./signup.html" class="get-started-button_1">Get Started</a>
-                <a href="./courses.html" class="browse-courses-button_1">Browse Courses</a>
+                <a href="./signin.php" class="get-started-button_1">Get Started</a>
+                <a href="./courses.php" class="browse-courses-button_1">Browse Courses</a>
             </div>
         </div>
         <div class="image-container_1">
@@ -51,79 +51,7 @@
     </section>
 
     <!--------------------------------------- Feature ----------------------------------->
-    <section class="feature-section_1">
-        <h2>Explore Our Categories</h2>
-        <div class="row_1">
-            <div class="feature-box_1">
-                <a href="./category-posts.html">
-                    <!-- <i class="fas fa-code"></i> -->
-                    <i class="fa-brands fa-free-code-camp"></i>
-                    <h3>Programming</h3>
-                    <small>7 Courses</small>
-                </a>
-            </div>
-            <div class="feature-box_1">
-                <a href="./category-posts.html">
-                    <!-- <i class="fas fa-cogs"></i> -->
-                    <i class="fa-brands fa-html5"></i>
-                    <h3>Development</h3>
-                    <small>2 Courses</small>
-                </a>
-            </div>
-            <div class="feature-box_1">
-                <a href="./category-posts.html">
-                    <!-- <i class="fas fa-chart-bar"></i> -->
-                    <!-- <i class="fa-solid fa-chart-pie"></i> -->
-                    <i class="fa-solid fa-atom"></i>
-                    <h3>Data Science</h3>
-                    <small>4 Courses</small>
-                </a>
-            </div>
-            <div class="feature-box_1">
-                <a href="./category-posts.html">
-                    <!-- <i class="fas fa-camera"></i> -->
-                    <i class="fa-solid fa-camera-retro"></i>
-                    <h3>Photography</h3>
-                    <small>3 Courses</small>
-                </a>
-            </div>
-        </div>
-        <div class="row_1">
-            <div class="feature-box_1">
-                <a href="./category-posts.html">
-                    <!-- <i class="fas fa-network-wired"></i> -->
-                    <i class="fa-solid fa-diagram-project"></i>
-                    <h3>Networking</h3>
-                    <small>1 Courses</small>
-                </a>
-            </div>
-            <div class="feature-box_1">
-                <a href="./category-posts.html">
-                    <!-- <i class="fas fa-paint-brush"></i> -->
-                    <i class="fa-solid fa-palette"></i>
-                    <h3>Art & Design</h3>
-                    <small>2 Courses</small>
-                </a>
-            </div>
-            <div class="feature-box_1">
-                <a href="./category-posts.html">
-                    <!-- <i class="fas fa-pen-square"></i> -->
-                    <i class="fa-brands fa-uikit"></i>
-                    <h3>UX/UI Design</h3>
-                    <small>4 Courses</small>
-                </a>
-            </div>
-            <div class="feature-box_1">
-                <a href="./category-posts.html">
-                    <!-- <i class="fas fa-money-bill-alt"></i> -->
-                    <i class="fa-solid fa-sack-dollar"></i>
-                    <h3>Finance</h3>
-                    <small>1 Courses</small>
-                </a>
-            </div>
-        </div>
-    </section>
-
+   
 
     <!--------------------------------------- Start Category ----------------------------------->
     <!-- <section class="category__buttons">
@@ -168,33 +96,32 @@
             <article>
                 <h4>Important Link</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Instructors</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Signin</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="./courses.php">Courses</a></li>
+                    <li><a href="./instructors.php">Instructors</a></li>
+                   
+                    <li><a href="./signin.php">Signin</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="">Call Numbers</a></li>
-                    <li><a href="">Email</a></li>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">LinkedIn</a></li>
+               
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Permalinks</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">East West University</a></li>
-                    <li><a href="">Bangladesh Govt</a></li>
-                    <li><a href="">Ministry of Education</a></li>
-                    <li><a href="">Police</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="https://www.ewubd.edu/">East West University</a></li>
+                    <li><a href="https://bangladesh.gov.bd/index.php">Bangladesh Govt</a></li>
+                    <li><a href="https://moedu.gov.bd/">Ministry of Education</a></li>
+                    <li><a href="https://www.police.gov.bd/">Police</a></li>
                 </ul>
             </article>
         </div>

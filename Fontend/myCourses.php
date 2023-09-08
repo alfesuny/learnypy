@@ -56,112 +56,71 @@
 
     <!--------------------------------------- Start Course ----------------------------------->
     <section class="posts">
-        <div class="container courses__container__grid">
+    <div class="container courses__container__grid">
+        <?php
+        // Establish a database connection
+        $link = mysqli_connect("localhost", "root", "", "learnypy") or die("ERROR: Could not connect. " . mysqli_connect_error());
 
-            <?php
-                
-                // Establish a database connection
-                $link = mysqli_connect("localhost", "root", "", "learnypy") or die("ERROR: Could not connect. " . mysqli_connect_error());
-            
-                // Check if the database connection is successful
-                if ($link) {
-                    // Perform the JOIN query
-                   $query = "SELECT i.instructor_fname, i.instructor_lname, c.course_name, c.course_category, c.course_description, i.instructor_username
+        // Check if the database connection is successful
+        if ($link) {
+            // Perform the JOIN query
+            $query = "SELECT i.instructor_fname, i.instructor_lname, c.course_name, c.course_category, c.course_description, i.instructor_username
                     FROM instructor_info i
                     INNER JOIN course c
                     ON i.instructor_username = c.course_instructor
                     WHERE i.instructor_username = '" . $_SESSION["user_name"] . "'";
-          
-            
-                    $result = mysqli_query($link, $query);
-            
-                    if ($result) {
-                        if (mysqli_num_rows($result) > 0) {
-                            // Output data for each row
-                            while ($row = mysqli_fetch_assoc($result)) {
 
+            $result = mysqli_query($link, $query);
 
-                                echo '
-                                <div class="course__container_in_corses">
+            if ($result) {
+                if (mysqli_num_rows($result) > 0) {
+                    // Output data for each row
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo '
+                        <div class="course__container_in_corses">
+                            <div>
+                                <img class="course__container_in_corses_banar" src="../images/blog39.jpg" alt="">
+                            </div>
+                            <div>
                                 <div>
-                                    <img class="course__container_in_corses_banar" src="../images/blog39.jpg" alt="">
+                                    <div style="margin-bottom: 5px; margin-top: 5px;"></div>
+                                    <h4 style="margin-top: 5px; margin-bottom: 5px;"><a href="./classroom.php?course_name=' . $row['course_name'] . '&course_category=' . $row['course_category'] . '&instructor_username=' . $row['instructor_username'] . '">' . $row['course_name'] . '</a></h4>
+                                    <div style="margin-bottom: 5px; margin-top: 5px;">
+                                        <i class="fa-regular fa-circle-user"></i> <small>Enroll 23</small>
+                                        <i class="fa-regular fa-file-lines"></i> <small>12 Lesson</small>
+                                    </div>
+                                    <hr style="height:1px;border-width:0;color:rgb(175, 175, 175);background-color:rgb(200, 200, 200);">
                                 </div>
-                                <div>
+                                <div style="margin-top: 15px;" class="courses__instructor">
+                                    <div class="courses__author_profile_pic">
+                                        <img src="../pic/instructor/' . $row['instructor_username'] . '.jpg" alt="">
+                                        <a href="./singleInstructor.html">
+                                            <h5 style="margin-left: 15px;">' . $row['instructor_lname'] . '</h5>
+                                        </a>
+                                    </div>
                                     <div>
-                                        <div style="margin-bottom: 5px; margin-top: 5px;">
-                                           
-                                        </div>
-                                        <h4 style="margin-top: 5px; margin-bottom: 5px;"><a href="./course.html">'. $row['course_name'] . '</a></h4>
-                
-                                        <div style="margin-bottom: 5px; margin-top: 5px;">
-                                            <i class="fa-regular fa-circle-user"></i> <small>Enroll 23</small>
-                                            <i class="fa-regular fa-file-lines"></i> <small>12 Lesson</small>
-                                            
-                                        </div>
-                
-                                        <hr
-                                            style="height:1px;border-width:0;color:rgb(175, 175, 175);background-color:rgb(200, 200, 200);">
-                
+                                        <button class="btn__enrole" type="submit"><a href="classroom.php?course_name=' . $row['course_name'] . '&course_category=' . $row['course_category'] . '&instructor_username=' . $_SESSION["user_name"] . '">Enter</a></button>
                                     </div>
-                
-                                    <div style="margin-top: 15px;" class="courses__instructor">
-                                        <div class="courses__author_profile_pic">
-                                            <img src="../pic/instructor/'.$row['instructor_username'].'.jpg" alt="">
-                                            <a href="./singleInstructor.html">
-                                                <h5 style="margin-left: 15px;">'. $row['instructor_lname'].'</h5>
-                                            </a>
-                                        </div>
-                                        <div>
-                                        
-                                        <button class="btn__enrole" type="submit"><a href="classroom.php?course_name='. $row['course_name'] . '&course_category='. $row['course_category'] . '&instructor_username='. $_SESSION["user_name"] . '"> Enter  </a> </button> 
-                                    
-                                        </div>
-                                       
-                                    </div>
-                
                                 </div>
                             </div>
-                                
-                                
-                                ';
-                               
-                            }
-                        } else {
-                            echo "No matching records found.";
-                        }
-                    } else {
-                        echo "Error: " . mysqli_error($link);
+                        </div>';
                     }
-            
-                    // Close the database connection
-                    mysqli_close($link);
                 } else {
-                    echo "Failed to connect to the database.";
+                    echo "No matching records found.";
                 }
-                
+            } else {
+                echo "Error: " . mysqli_error($link);
+            }
 
+            // Close the database connection
+            mysqli_close($link);
+        } else {
+            echo "Failed to connect to the database.";
+        }
+        ?>
+    </div>
+</section>
 
-            ?>
-
-
-
-        
-           
-
-
-   
-
-
-
-
-
-          
-
-            
-
-
-        </div>
-    </section>
     <br>
 
     <!--------------------------------------- End Course --------------------------------------->
@@ -186,6 +145,7 @@
     <!--------------------------------------- End Category ----------------------------------->
 
     <!--------------------------------------- Start Footer ----------------------------------->
+   
     <footer>
         <div class="footer__socials">
             <a href="https://www.linkedin.com/in/fahad-bd/" target="_blank"><i class="uil uil-linkedin"></i></a>
@@ -202,51 +162,51 @@
                     skills, and unlock your potential from anywhere, at any time.</small>
                 <!-- <h4>xyz</h4> -->
                 <!-- <ul>
-                <li><a href="">a</a></li>
-                <li><a href="">a</a></li>
-                <li><a href="">a</a></li>
-                <li><a href="">a</a></li>
-                <li><a href="">a</a></li>
-            </ul> -->
+                    <li><a href="">a</a></li>
+                    <li><a href="">a</a></li>
+                    <li><a href="">a</a></li>
+                    <li><a href="">a</a></li>
+                    <li><a href="">a</a></li>
+                </ul> -->
             </article>
 
             <article>
                 <h4>Important Link</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Instructors</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Signin</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="./courses.php">Courses</a></li>
+                    <li><a href="./instructors.php">Instructors</a></li>
+                   
+                    <li><a href="./signin.php">Signin</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="">Call Numbers</a></li>
-                    <li><a href="">Email</a></li>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">LinkedIn</a></li>
+               
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Permalinks</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">East West University</a></li>
-                    <li><a href="">Bangladesh Govt</a></li>
-                    <li><a href="">Ministry of Education</a></li>
-                    <li><a href="">Police</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="https://www.ewubd.edu/">East West University</a></li>
+                    <li><a href="https://bangladesh.gov.bd/index.php">Bangladesh Govt</a></li>
+                    <li><a href="https://moedu.gov.bd/">Ministry of Education</a></li>
+                    <li><a href="https://www.police.gov.bd/">Police</a></li>
                 </ul>
             </article>
         </div>
         <div class="footer__copyright">
-            <small>Copyright &copy; 2024 LearnyPy</small>
+            <small>Copyright &copy; 2024 <span style="color: orange;">Learny</span>Py</small>
         </div>
     </footer>
+
     <!--------------------------------------- End Footer ----------------------------------->
 
 

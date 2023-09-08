@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $conn = mysqli_connect("localhost", "root", "", "learnypy") or die("ERROR: Could not connect. " . mysqli_connect_error());
 
 ?>
@@ -29,32 +29,8 @@ $conn = mysqli_connect("localhost", "root", "", "learnypy") or die("ERROR: Could
 
 <body>
     <!--------------------------------------- Navigation Bar ------------------------------------->
-    <nav>
-        <div class="container nav__container">
-            <a href="./index.html"><img class="nav__logo" src="../images/logo1.png" alt="logo"></a>
-            <ul class="nav__items">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./courses.html">Courses</a></li>
-                <li><a href="./instructors.html">Instructors</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="./signin.html">Login</a></li>
-                <li><a href="./signup.html">Sign Up</a></li>
-                <li class="nav__profile">
-                    <div class="avatar">
-                        <img src="../images/profile1.jpeg">
-                    </div>
-                    <ul>
-                        <li><a href="./dashboard.html">Dashboard</a></li>
-                        <li><a href="#">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
+    <?php include 'header.php' ?>
 
-            <!-- hamburger icon -->
-            <!-- <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
-            <button id="close__nav-btn"><i class="uil uil-times-square"></i></button> -->
-        </div>
-    </nav>
     <!----------------------------------------- End Nav Bar --------------------------------------->
     <br>
 
@@ -76,12 +52,12 @@ $conn = mysqli_connect("localhost", "root", "", "learnypy") or die("ERROR: Could
                         </a></li>
                 </ul>
                 <ul>
-                    <li><a href="./addCourse.html"><i class="uil uil-pen"></i>
+                    <li><a href="./signup.php"><i class="uil uil-pen"></i>
                             <h5>Add Student</h5>
                         </a></li>
                 </ul>
                 <ul>
-                    <li><a  href="./dashboard.html"><i class="uil uil-fast-mail"></i>
+                    <li><a  href="./manageCourses.php"><i class="uil uil-fast-mail"></i>
                             <h5>Manage Course</h5>
                         </a></li>
                 </ul>
@@ -227,6 +203,7 @@ $conn = mysqli_connect("localhost", "root", "", "learnypy") or die("ERROR: Could
     <!--------------------------------------- End Category ----------------------------------->
 
     <!--------------------------------------- Start Footer ----------------------------------->
+    
     <footer>
         <div class="footer__socials">
             <a href="https://www.linkedin.com/in/fahad-bd/" target="_blank"><i class="uil uil-linkedin"></i></a>
@@ -254,33 +231,32 @@ $conn = mysqli_connect("localhost", "root", "", "learnypy") or die("ERROR: Could
             <article>
                 <h4>Important Link</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Instructors</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Signin</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="./courses.php">Courses</a></li>
+                    <li><a href="./instructors.php">Instructors</a></li>
+                   
+                    <li><a href="./signin.php">Signin</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="">Call Numbers</a></li>
-                    <li><a href="">Email</a></li>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">LinkedIn</a></li>
+               
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Permalinks</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">East West University</a></li>
-                    <li><a href="">Bangladesh Govt</a></li>
-                    <li><a href="">Ministry of Education</a></li>
-                    <li><a href="">Police</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="https://www.ewubd.edu/">East West University</a></li>
+                    <li><a href="https://bangladesh.gov.bd/index.php">Bangladesh Govt</a></li>
+                    <li><a href="https://moedu.gov.bd/">Ministry of Education</a></li>
+                    <li><a href="https://www.police.gov.bd/">Police</a></li>
                 </ul>
             </article>
         </div>
@@ -288,6 +264,7 @@ $conn = mysqli_connect("localhost", "root", "", "learnypy") or die("ERROR: Could
             <small>Copyright &copy; 2024 <span style="color: orange;">Learny</span>Py</small>
         </div>
     </footer>
+
     <!--------------------------------------- End Footer ----------------------------------->
 
 

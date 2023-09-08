@@ -55,13 +55,24 @@
                     $targetDirectory = "../pic/instructor/"; // Specify the target directory where you want to save the uploaded file
                     $filename = $username .'.jpg';
                     $targetFile = $targetDirectory . basename($filename); // Specify the target file path
+                    
+                    // if(is_dir($targetDirectory)){
+                    //     echo "IS IT A DIRECTORY <br>";
+                    // }
 
+                    // if(is_writable($targetDirectory)){
+                    //     echo "DESTIONATION DIRECTORY IS WRITABLE <br>";
+                    // }
+                    
+                    // exit();
+                    
                     // Check if the file already exists
                     if (file_exists($targetFile)) {
                         echo "File already exists. Please choose a different file.";
                     } else {
                         // Check if the file was uploaded successfully
                         if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
+                            
                             echo "The file " . $username . " has been uploaded.";
                         } else {
                             echo "Sorry, there was an error uploading your file.";
@@ -279,18 +290,21 @@
     <!--------------------------------------- End Category ----------------------------------->
 
     <!--------------------------------------- Start Footer ----------------------------------->
+    
     <footer>
         <div class="footer__socials">
             <a href="https://www.linkedin.com/in/fahad-bd/" target="_blank"><i class="uil uil-linkedin"></i></a>
             <a href="https://www.youtube.com/" target="_blank"><i class="uil uil-youtube"></i></a>
             <a href="https://www.facebook.com/fahadahammedbd" target="_blank"><i class="uil uil-facebook"></i></a>
             <a href="https://twitter.com/fahadbd01" target="_blank"><i class="uil uil-twitter"></i></a>
-            <a href="https://www.instagram.com/fahadahammedbd/" target="_blank"><i class="uil uil-instagram-alt"></i></a>
+            <a href="https://www.instagram.com/fahadahammedbd/" target="_blank"><i
+                    class="uil uil-instagram-alt"></i></a>
         </div>
         <div class="container footer__container">
             <article style="margin-right: 50px;">
                 <img src="../images/logo1.png" alt="">
-                <small>Join LearnyPy, the ultimate online learning platform! Explore a vast range of courses, gain new skills, and unlock your potential from anywhere, at any time.</small>
+                <small>Join LearnyPy, the ultimate online learning platform! Explore a vast range of courses, gain new
+                    skills, and unlock your potential from anywhere, at any time.</small>
                 <!-- <h4>xyz</h4> -->
                 <!-- <ul>
                     <li><a href="">a</a></li>
@@ -304,33 +318,32 @@
             <article>
                 <h4>Important Link</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Courses</a></li>
-                    <li><a href="">Instructors</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Signin</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="./courses.php">Courses</a></li>
+                    <li><a href="./instructors.php">Instructors</a></li>
+                   
+                    <li><a href="./signin.php">Signin</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="">Call Numbers</a></li>
-                    <li><a href="">Email</a></li>
-                    <li><a href="">Facebook</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">LinkedIn</a></li>
+               
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="https://www.twitter.com">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com">LinkedIn</a></li>
                 </ul>
             </article>
 
             <article>
                 <h4>Permalinks</h4>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">East West University</a></li>
-                    <li><a href="">Bangladesh Govt</a></li>
-                    <li><a href="">Ministry of Education</a></li>
-                    <li><a href="">Police</a></li>
+                    <li><a href="./index.php">Home</a></li>
+                    <li><a href="https://www.ewubd.edu/">East West University</a></li>
+                    <li><a href="https://bangladesh.gov.bd/index.php">Bangladesh Govt</a></li>
+                    <li><a href="https://moedu.gov.bd/">Ministry of Education</a></li>
+                    <li><a href="https://www.police.gov.bd/">Police</a></li>
                 </ul>
             </article>
         </div>
@@ -338,6 +351,7 @@
             <small>Copyright &copy; 2024 <span style="color: orange;">Learny</span>Py</small>
         </div>
     </footer>
+
     <!--------------------------------------- End Footer ----------------------------------->
 
 

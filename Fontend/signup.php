@@ -146,7 +146,7 @@
                     <input type="file" name="image" accept="image/*" required>
                 </div>
                 <button class="btn" type="submit">Sign Up</button>
-                <small>Already have an account? <a href="./signin.html">Sign In</a></small>
+                <small>Already have an account? <a href="./signin.php">Sign In</a></small>
             </form>
         </div>
 
